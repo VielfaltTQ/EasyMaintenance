@@ -1,0 +1,8 @@
+name: EasyMaintenance
+version: 1.0
+author: Vielfalt
+main: de.vielfalt.easymaintenance.EasyMaintenance
+
+commands:
+  easymaintenance:
+    aliases: [em, maintenance]
