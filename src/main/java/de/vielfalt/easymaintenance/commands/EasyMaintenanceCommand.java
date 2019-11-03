@@ -32,7 +32,7 @@ public class EasyMaintenanceCommand implements CommandExecutor {
 
                     if(args[1].equalsIgnoreCase("add")) {
 
-                        
+
 
                     } else if(args[1].equalsIgnoreCase("remove")) {
 
