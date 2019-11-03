@@ -14,7 +14,7 @@ public class PlayerLoginListener implements Listener {
     public PlayerLoginListener(EasyMaintenance instance) {
 
         this.instance = instance;
-        this.instance.getServer().getPluginManager().registerEvents(this, this.instance);
+        Bukkit.getPluginManager().registerEvents(this, this.instance);
 
     }
 

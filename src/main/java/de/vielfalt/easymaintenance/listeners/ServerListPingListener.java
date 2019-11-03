@@ -13,7 +13,7 @@ public class ServerListPingListener implements Listener {
     public ServerListPingListener(EasyMaintenance instance) {
 
         this.instance = instance;
-        this.instance.getServer().getPluginManager().registerEvents(this, this.instance);
+        Bukkit.getPluginManager().registerEvents(this, this.instance);
 
     }
 
@@ -25,8 +25,8 @@ public class ServerListPingListener implements Listener {
             event.setMotd(getInstance().getMessageManager().getMessage("Serverlist.1") + "\n"
                     + getInstance().getMessageManager().getMessage("Serverlist.2"));
 
-            if(getInstance().getDataManager().getConfigFile().getBoolean("Configuration.Maintenance.Customslot")) {
-                event.setMaxPlayers((getInstance().getServer().getOnlinePlayers().size() + 1)); }
+            if(getInstance().getDataManager().getConfigFile().getBoolean("Configuration.Maintenance.CustomSlot")) {
+                event.setMaxPlayers((Bukkit.getOnlinePlayers().size() + 1)); }
 
         }
 

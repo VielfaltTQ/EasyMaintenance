@@ -34,14 +34,14 @@ public class FileManager {
 
         this.yamlConfiguration.options().copyDefaults(true);
         this.yamlConfiguration.addDefault(path, object);
-        saveFile();
+        save();
 
     }
 
     public void set(String path, Object object) {
 
         this.yamlConfiguration.set(path, object);
-        saveFile();
+        save();
 
     }
 
@@ -58,7 +58,7 @@ public class FileManager {
     public ConfigurationSection getConfigurationSection(String path) { return this.yamlConfiguration.getConfigurationSection(path); }
     public Set<String> getKeys(Boolean value) { return this.yamlConfiguration.getKeys(value); }
 
-    public void saveFile() {
+    public void save() {
 
         try {
 

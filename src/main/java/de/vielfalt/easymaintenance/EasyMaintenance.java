@@ -1,11 +1,10 @@
 package de.vielfalt.easymaintenance;
 
+import de.vielfalt.easymaintenance.commands.EasyMaintenanceCommand;
 import de.vielfalt.easymaintenance.listeners.PlayerLoginListener;
 import de.vielfalt.easymaintenance.listeners.ServerListPingListener;
 import de.vielfalt.easymaintenance.managers.DataManager;
 import de.vielfalt.easymaintenance.managers.MessageManager;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class EasyMaintenance extends JavaPlugin {
@@ -29,6 +28,7 @@ public class EasyMaintenance extends JavaPlugin {
 
     private void register() {
 
+        new EasyMaintenanceCommand(getInstance(), "easymaintenance");
         new PlayerLoginListener(getInstance());
         new ServerListPingListener(getInstance());
 
